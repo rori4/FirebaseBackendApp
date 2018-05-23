@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Files</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="javascript:uploadToFirebase();">
+    Category: <input type="text" name="category" id="category"><br>
+    Title: <input type="text" name="title" id="title"><br>
+    Id: <input type="text" name="id" id="id"><br>
+    Description: <input type="text" name="description" id="description"><br>
+    FreeImages: <input type="number" name="freeImages" id="freeImages"><br>
+    Image: <input type="file" accept="image/png" name="images" id="images" multiple><br>
+    <input type="submit" value="Submit">
+</form>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBPxu7ulaqYZmC7LZ0rTGTeAbgXSX4OSuk",
+        authDomain: "coloring-app-unibul-pres.firebaseapp.com",
+        databaseURL: "https://coloring-app-unibul-pres.firebaseio.com",
+        projectId: "coloring-app-unibul-pres",
+        storageBucket: "coloring-app-unibul-pres.appspot.com",
+        messagingSenderId: "430989662533"
+    };
+    firebase.initializeApp(config);
+</script>
+<!--<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>-->
+<script src="firebase.js"></script>
+</body>
+</html>
